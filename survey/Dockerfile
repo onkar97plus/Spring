@@ -4,6 +4,6 @@
 FROM openjdk:15
 RUN ls
 RUN pwd
-COPY SpringSurvey.jar
-# COPY target/spring-boot-docker.jar app.jar
+COPY SpringSurvey.jar app.jar
+COPY target/spring-boot-docker.jar app.jar
 ENTRYPOINT  ["java", "-jar", "app.jar"]
