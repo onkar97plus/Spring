@@ -2,8 +2,8 @@
 # COPY survey.war /usr/local/tomcat/webapps/
 
 FROM openjdk:15
-COPY SpringSurvey.jar
 RUN ls
 RUN pwd
+COPY SpringSurvey.jar
 # COPY target/spring-boot-docker.jar app.jar
 ENTRYPOINT  ["java", "-jar", "app.jar"]
