@@ -3,5 +3,7 @@
 
 FROM openjdk:15
 COPY SpringSurvey.jar
+RUN ls
+RUN pwd
 # COPY target/spring-boot-docker.jar app.jar
 ENTRYPOINT  ["java", "-jar", "app.jar"]
