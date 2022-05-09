@@ -10,8 +10,8 @@ pipeline {
 					checkout scm
 					sh 'rm -rf *.war'
 					sh 'pwd'
-					sh 'jar -cvf SpringSurvey.war -C survey/src/ .'
-					sh 'mv SpringSurvey.war survey/src/'
+					sh 'jar -cvf SpringSurvey.jar -C survey/src/ .'
+					sh 'mv SpringSurvey.jar survey/src/'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'echo ${BUILD_ID}'
 					sh 'docker login -u onkar97 -p $pass'
