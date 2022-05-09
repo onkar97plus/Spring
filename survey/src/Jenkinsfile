@@ -10,6 +10,7 @@ pipeline {
 					checkout scm
 					sh 'rm -rf *.war'
 					sh 'pwd'
+					sh 'npm install'
 					sh 'jar -cvf SpringSurvey.jar -C survey/src/ .'
 					sh 'mv SpringSurvey.jar survey/'
 					sh 'echo ${BUILD_TIMESTAMP}'
